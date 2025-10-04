@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "vite": "^5.4.20",
+    "vite-plugin-ruby": "^5.1.1"
+  },
+  "scripts": {
+    "dev": "bin/vite dev"
+  },
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  }
+}

@@ -90,7 +90,20 @@ touch app/controllers/api/v1/tax_calculation_controller.rb
 mkdir -p spec/requests/api/v1
 touch spec/requests/api/v1/tax_calculation_spec.rb
 
-# Run the tests (repeatedly until we get them passing)
+# Run the tests using TDD (repeatedly until we get them passing)
 bundle exec rspec
-```
 
+# configure Vite
+bundle exec vite install
+
+# Add an alias for the vite dev server to package.json
+  "scripts": {
+    "dev": "bin/vite dev"
+  }
+
+# Run the Vite dev server
+npm run dev
+
+# Add react
+npm install react react-dom @vitejs/plugin-react
+```
