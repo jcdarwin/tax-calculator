@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: utf8
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: <%= ENV['POSTGRES_USER'] || '' %>
+  password: <%= ENV['POSTGRES_PASSWORD'] || '' %>
+  host: <%= ENV['POSTGRES_HOST'] || 'localhost' %>
+  timeout: 5000
+  port: 5432
+
+development:
+  <<: *default
+  database: tax_development
+
+test:
+  <<: *default
+  database: tax_test
+
+production:
+  <<: *default
+  database: tax_production
