@@ -5,14 +5,16 @@ It provides an API endpoint to perform tax calculations and includes a simple ho
 
 Refer to the [2025 NZ income tax rates for individuals](https://www.ird.govt.nz/income-tax/income-tax-for-individuals/tax-codes-and-tax-rates-for-individuals/tax-rates-for-individuals) for details of the tax brackets used in this app.
 
-# Prerequisites
+## Prerequisites
 
 - Ruby 3
 - Rails 7
 - PostgreSQL
 - Node.js and npm
 
-# Installation
+## Installation
+
+Install this app for local use by following these steps:
 
 ```sh
 # Clone the repo
@@ -28,7 +30,7 @@ rails db:migrate RAILS_ENV=development
 rails db:migrate RAILS_ENV=test
 ```
 
-# Usage
+## Usage
 
 Running the app locally:
 
@@ -49,12 +51,12 @@ Running tests:
 bundle exec rspec
 ```
 
-# Assumptions
+## Assumptions
 
 * We store currency amounts in cents as integers to avoid floating-point precision issues.
 As a result, we assume that we can convert between "dollars" and "cents" (or whatever major and minor units the currency in question has) by multiplying/dividing by a power of 10.
 
-# Possible Improvements
+## Possible Improvements
 
 There's a number of areas where this app could be improved if it were to be developed for production:
 
@@ -67,8 +69,9 @@ There's a number of areas where this app could be improved if it were to be deve
 * Add support for more jurisdictions and their respective tax brackets.
 * Add more detailed logging and monitoring.
 * Properly dockerise this app so it can be run with the prerequisites.
+* Add CI/CD pipeline for automated testing and deployment.
 
-# Development Process
+## Development Process
 
 We set this app up as follows:
 
